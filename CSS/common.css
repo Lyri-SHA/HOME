@@ -1,23 +1,158 @@
+/* =====================
+   家計簿入力画面専用CSS
+===================== */
+
+
+/* 全体 */
+
+body {
+
+    margin:0;
+
+    padding:20px;
+
+    background:#f5f5f5;
+
+    font-family:
+    "メイリオ",
+    sans-serif;
+
+}
+
+
+
+/* タイトル */
+
+h1 {
+
+    text-align:center;
+
+    font-size:32px;
+
+    margin:20px 0 30px;
+
+}
+
+
+
 /* 戻るボタン */
 
 .back-button {
+
+    width:100%;
+
+    height:50px;
+
+    font-size:18px;
+
+    border:none;
+
+    border-radius:10px;
+
+}
+
+
+
+/* 入力エリア */
+
+.input-area {
+
+    width:100%;
+
+}
+
+
+
+/* 項目名 */
+
+.input-area label {
+
+    display:block;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    margin-top:30px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+/* 入力欄 */
+
+.input-area input,
+.input-area select,
+.input-area textarea {
 
     display:block;
 
     width:100%;
 
-    max-width:500px;
+    box-sizing:border-box;
 
-    margin-bottom:20px;
+    height:65px;
 
-    padding:12px;
+    padding:15px;
 
-    font-size:16px;
+    font-size:20px;
+
+    background:white;
+
+    border:1px solid #ccc;
+
+    border-radius:12px;
+
+}
+
+
+
+/* メモ */
+
+.input-area textarea {
+
+    height:160px;
+
+    resize:none;
+
+}
+
+
+
+/* 登録ボタン */
+
+.input-area button {
+
+    display:block;
+
+    width:100%;
+
+    height:70px;
+
+    margin-top:40px;
+
+    font-size:22px;
 
     border:none;
 
-    border-radius:8px;
+    border-radius:12px;
 
-    cursor:pointer;
+}
+
+
+
+/* PC表示 */
+
+@media screen and (min-width:600px){
+
+    body {
+
+        max-width:500px;
+
+        margin:auto;
+
+    }
 
 }
