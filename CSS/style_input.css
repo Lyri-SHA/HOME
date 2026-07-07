@@ -1,5 +1,5 @@
 /* ===========================
-   家計簿入力画面
+   家計簿入力画面専用CSS
 =========================== */
 
 
@@ -17,6 +17,17 @@ body {
     "メイリオ",
     sans-serif;
 
+    box-sizing:border-box;
+
+}
+
+
+/* 全要素 */
+
+* {
+
+    box-sizing:border-box;
+
 }
 
 
@@ -27,6 +38,8 @@ header {
 
     width:100%;
 
+    text-align:center;
+
 }
 
 
@@ -34,6 +47,8 @@ header {
 /* タイトル */
 
 h1 {
+
+    width:100%;
 
     text-align:center;
 
@@ -63,7 +78,7 @@ h1 {
 
 
 
-/* 入力全体 */
+/* 入力エリア */
 
 .input-area {
 
@@ -73,9 +88,11 @@ h1 {
 
 
 
-/* 1項目 */
+/* 各入力項目 */
 
 .input-item {
+
+    width:100%;
 
     margin-bottom:35px;
 
@@ -83,11 +100,13 @@ h1 {
 
 
 
-/* 項目名 */
+/* ラベル */
 
 label {
 
     display:block;
+
+    width:100%;
 
     font-size:20px;
 
@@ -109,8 +128,6 @@ textarea {
 
     width:100%;
 
-    box-sizing:border-box;
-
     padding:18px;
 
     font-size:20px;
@@ -125,12 +142,36 @@ textarea {
 
 
 
-/* 高さ */
+/* 日付 */
 
-input,
+input[type="date"] {
+
+    height:50px;
+
+    font-size:18px;
+
+    padding:12px;
+
+}
+
+
+
+/* カテゴリ */
+
 select {
 
-    height:65px;
+    height:60px;
+
+}
+
+
+
+/* 通常入力 */
+
+input[type="text"],
+input[type="number"] {
+
+    height:60px;
 
 }
 
@@ -140,7 +181,7 @@ select {
 
 textarea {
 
-    height:170px;
+    height:160px;
 
     resize:none;
 
@@ -152,17 +193,35 @@ textarea {
 
 .register-button {
 
+    display:block;
+
     width:100%;
 
     height:70px;
 
-    margin-top:10px;
+    margin-top:20px;
 
     font-size:22px;
 
     border:none;
 
     border-radius:12px;
+
+}
+
+
+
+/* スマホ中央配置 */
+
+@media screen and (max-width:599px){
+
+    body {
+
+        width:100%;
+
+        padding:20px;
+
+    }
 
 }
 
