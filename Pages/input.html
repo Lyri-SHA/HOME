@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="ja">
+
 <head>
 
 <meta charset="UTF-8">
@@ -16,16 +19,12 @@
 <body>
 
 <button class="back-button" onclick="location.href='../index.html'">
-    戻る
+    ← 戻る
 </button>
-
-
 
 <h1>
     家計簿入力
 </h1>
-
-
 
 
 <div class="input-area">
@@ -63,12 +62,12 @@
         交通費
     </option>
 
-    <option value="趣味・娯楽">
+    <option value="娯楽">
         趣味・娯楽
     </option>
 
     <option value="固定費">
-        固定費（家賃・公共料金など）
+        固定費
     </option>
 
     <option value="PayPay">
@@ -91,10 +90,10 @@
     内容
 </label>
 
-<input 
-    type="text" 
+<input
+    type="text"
     id="name"
-    placeholder="例：スーパーで買い物">
+    placeholder="内容を入力">
 
 
 
@@ -102,10 +101,10 @@
     金額
 </label>
 
-<input 
-    type="number" 
+<input
+    type="number"
     id="price"
-    placeholder="例：3000">
+    placeholder="金額を入力">
 
 
 
@@ -113,7 +112,7 @@
     メモ
 </label>
 
-<textarea 
+<textarea
     id="memo"
     placeholder="メモを入力">
 </textarea>
@@ -123,6 +122,7 @@
 <button onclick="addExpense()">
     登録
 </button>
+
 
 
 </div>
@@ -137,3 +137,5 @@
 
 
 </body>
+
+</html>
