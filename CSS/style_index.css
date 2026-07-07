@@ -8,7 +8,7 @@ body {
 
     margin:0;
 
-    padding:20px;
+    padding:25px;
 
     background:#f5f5f5;
 
@@ -22,9 +22,9 @@ h1 {
 
     text-align:center;
 
-    font-size:30px;
+    font-size:32px;
 
-    margin:20px 0 30px;
+    margin:20px 0 35px;
 
 }
 
@@ -50,9 +50,9 @@ label {
 
     font-weight:bold;
 
-    margin-top:20px;
+    margin-top:30px;
 
-    margin-bottom:10px;
+    margin-bottom:12px;
 
 }
 
@@ -95,13 +95,11 @@ select {
 
 
 
-/* メモ欄 */
+/* メモ */
 
 textarea {
 
-    height:150px;
-
-    resize:none;
+    height:160px;
 
 }
 
@@ -115,7 +113,7 @@ button {
 
     height:65px;
 
-    margin-top:30px;
+    margin-top:40px;
 
     font-size:22px;
 
@@ -135,7 +133,7 @@ button {
 
     margin-top:0;
 
-    margin-bottom:20px;
+    margin-bottom:10px;
 
     font-size:18px;
 
@@ -143,7 +141,7 @@ button {
 
 
 
-/* PC表示 */
+/* PC */
 
 @media screen and (min-width:600px){
 
