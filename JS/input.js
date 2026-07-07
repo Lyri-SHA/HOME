@@ -45,5 +45,9 @@ async function addExpense(){
 
 
     alert("登録成功");
-
+document.getElementById("date").value = "";
+document.getElementById("category").value = "";
+document.getElementById("name").value = "";
+document.getElementById("price").value = "";
+document.getElementById("memo").value = "";
 }
