@@ -33,7 +33,8 @@ h1 {
 /* 入力エリア */
 
 input,
-textarea {
+textarea,
+select {
 
     display:block;
 
@@ -41,15 +42,28 @@ textarea {
 
     box-sizing:border-box;
 
-    margin-bottom:15px;
+    margin-bottom:20px;
 
-    padding:12px;
+    padding:15px;
 
-    font-size:16px;
+    font-size:18px;
 
     border:1px solid #ccc;
 
-    border-radius:8px;
+    border-radius:10px;
+
+    background:white;
+
+}
+
+
+
+/* 日付・セレクトの高さ調整 */
+
+input,
+select {
+
+    height:55px;
 
 }
 
@@ -59,7 +73,7 @@ textarea {
 
 textarea {
 
-    height:120px;
+    height:140px;
 
     resize:none;
 
@@ -73,43 +87,39 @@ button {
 
     width:100%;
 
+    height:60px;
+
     padding:15px;
 
-    font-size:18px;
+    font-size:20px;
 
     border:none;
 
-    border-radius:10px;
+    border-radius:12px;
 
     cursor:pointer;
 
 }
 
-input,
-textarea,
-select {
 
-    display:block;
+
+/* 戻るボタン */
+
+.back-button {
 
     width:100%;
 
-    box-sizing:border-box;
+    height:50px;
 
-    margin-bottom:15px;
+    margin-bottom:20px;
 
-    padding:12px;
-
-    font-size:16px;
-
-    border:1px solid #ccc;
-
-    border-radius:8px;
-
-    background:white;
+    font-size:18px;
 
 }
 
-/* スマホ幅調整 */
+
+
+/* PC表示時 */
 
 @media screen and (min-width:600px){
 
