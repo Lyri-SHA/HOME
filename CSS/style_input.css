@@ -1,6 +1,6 @@
-/* =====================
-   家計簿入力画面専用CSS
-===================== */
+/* ===========================
+   家計簿入力画面
+=========================== */
 
 
 /* 全体 */
@@ -21,6 +21,16 @@ body {
 
 
 
+/* ヘッダー */
+
+header {
+
+    width:100%;
+
+}
+
+
+
 /* タイトル */
 
 h1 {
@@ -29,7 +39,7 @@ h1 {
 
     font-size:32px;
 
-    margin:20px 0 30px;
+    margin:25px 0 35px;
 
 }
 
@@ -53,7 +63,7 @@ h1 {
 
 
 
-/* 入力エリア */
+/* 入力全体 */
 
 .input-area {
 
@@ -63,17 +73,25 @@ h1 {
 
 
 
+/* 1項目 */
+
+.input-item {
+
+    margin-bottom:35px;
+
+}
+
+
+
 /* 項目名 */
 
-.input-area label {
+label {
 
     display:block;
 
     font-size:20px;
 
     font-weight:bold;
-
-    margin-top:30px;
 
     margin-bottom:12px;
 
@@ -83,9 +101,9 @@ h1 {
 
 /* 入力欄 */
 
-.input-area input,
-.input-area select,
-.input-area textarea {
+input,
+select,
+textarea {
 
     display:block;
 
@@ -93,17 +111,26 @@ h1 {
 
     box-sizing:border-box;
 
-    height:65px;
-
-    padding:15px;
+    padding:18px;
 
     font-size:20px;
 
-    background:white;
+    border-radius:12px;
 
     border:1px solid #ccc;
 
-    border-radius:12px;
+    background:white;
+
+}
+
+
+
+/* 高さ */
+
+input,
+select {
+
+    height:65px;
 
 }
 
@@ -111,9 +138,9 @@ h1 {
 
 /* メモ */
 
-.input-area textarea {
+textarea {
 
-    height:160px;
+    height:170px;
 
     resize:none;
 
@@ -123,15 +150,13 @@ h1 {
 
 /* 登録ボタン */
 
-.input-area button {
-
-    display:block;
+.register-button {
 
     width:100%;
 
     height:70px;
 
-    margin-top:40px;
+    margin-top:10px;
 
     font-size:22px;
 
