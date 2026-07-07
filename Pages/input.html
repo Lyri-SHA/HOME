@@ -1,0 +1,80 @@
+<body>
+
+<h1>
+家計簿入力
+</h1>
+
+<button class="back-button" onclick="location.href='../index.html'">
+    ← 戻る
+</button>
+
+<input type="date" id="date">
+
+
+<select id="category">
+
+    <option value="">
+        カテゴリを選択
+    </option>
+
+    <option value="食費">
+        食費
+    </option>
+
+    <option value="日用品">
+        日用品
+    </option>
+
+    <option value="交通費">
+        交通費
+    </option>
+
+    <option value="娯楽">
+        趣味・娯楽
+    </option>
+
+    <option value="固定費">
+        固定費（家賃とか公共料金）
+    </option>
+
+    <option value="固定費">
+        PayPay
+    </option>
+
+    <option value="固定費">
+        majica
+    </option>
+
+    <option value="その他">
+        その他
+    </option>
+
+</select>
+
+
+<input type="text" id="name"
+placeholder="内容">
+
+
+<input type="number" id="price"
+placeholder="金額">
+
+
+<textarea id="memo"
+placeholder="メモ"></textarea>
+
+
+<button onclick="addExpense()">
+登録
+</button>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<script src="../js/supabase.js"></script>
+
+<script src="../js/input.js"></script>
+
+
+</body>

@@ -1,0 +1,124 @@
+/* 全体設定 */
+
+body {
+
+    font-family:
+    "メイリオ",
+    sans-serif;
+
+    margin:0;
+
+    padding:20px;
+
+    background:#f5f5f5;
+
+}
+
+
+
+/* タイトル */
+
+h1 {
+
+    text-align:center;
+
+    font-size:28px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/* 入力エリア */
+
+input,
+textarea {
+
+    display:block;
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    margin-bottom:15px;
+
+    padding:12px;
+
+    font-size:16px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+}
+
+
+
+/* メモ欄 */
+
+textarea {
+
+    height:120px;
+
+    resize:none;
+
+}
+
+
+
+/* 登録ボタン */
+
+button {
+
+    width:100%;
+
+    padding:15px;
+
+    font-size:18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+input,
+textarea,
+select {
+
+    display:block;
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    margin-bottom:15px;
+
+    padding:12px;
+
+    font-size:16px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    background:white;
+
+}
+
+/* スマホ幅調整 */
+
+@media screen and (min-width:600px){
+
+    body {
+
+        max-width:500px;
+
+        margin:auto;
+
+    }
+
+}
