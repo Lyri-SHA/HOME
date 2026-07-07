@@ -154,3 +154,36 @@ button {
     }
 
 }
+
+/* 強制確認用 */
+
+.input-area {
+    margin-top: 30px;
+}
+
+
+.input-area label {
+    display:block;
+    margin-top:40px !important;
+    margin-bottom:15px !important;
+}
+
+
+.input-area input,
+.input-area select,
+.input-area textarea {
+    min-height:70px;
+    padding:20px !important;
+    font-size:22px !important;
+}
+
+
+.input-area textarea {
+    min-height:180px;
+}
+
+
+.input-area button {
+    margin-top:50px !important;
+    height:70px;
+}
