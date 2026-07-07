@@ -16,6 +16,20 @@ body {
 
 
 
+/* タイトル */
+
+h1 {
+
+    text-align:center;
+
+    font-size:30px;
+
+    margin:20px 0 30px;
+
+}
+
+
+
 /* 入力エリア */
 
 .input-area {
@@ -25,40 +39,57 @@ body {
 }
 
 
+
 /* 項目名 */
 
 label {
 
     display:block;
 
-    font-size:18px;
+    font-size:20px;
 
     font-weight:bold;
 
-    margin-bottom:8px;
+    margin-top:20px;
+
+    margin-bottom:10px;
 
 }
 
 
-/* タイトル */
 
-h1 {
-
-    text-align:center;
-
-    font-size:28px;
-
-    margin-bottom:30px;
-
-}
-
-
-/* 日付・セレクトの高さ調整 */
+/* 入力欄 */
 
 input,
+select,
+textarea {
+
+    display:block;
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    padding:18px;
+
+    font-size:20px;
+
+    border:1px solid #ccc;
+
+    border-radius:12px;
+
+    background:white;
+
+}
+
+
+
+/* 日付・カテゴリ */
+
+input[type="date"],
 select {
 
-    height:55px;
+    height:65px;
 
 }
 
@@ -68,7 +99,7 @@ select {
 
 textarea {
 
-    height:140px;
+    height:150px;
 
     resize:none;
 
@@ -82,17 +113,15 @@ button {
 
     width:100%;
 
-    height:60px;
+    height:65px;
 
-    padding:15px;
+    margin-top:30px;
 
-    font-size:20px;
+    font-size:22px;
 
     border:none;
 
     border-radius:12px;
-
-    cursor:pointer;
 
 }
 
@@ -102,9 +131,9 @@ button {
 
 .back-button {
 
-    width:100%;
-
     height:50px;
+
+    margin-top:0;
 
     margin-bottom:20px;
 
@@ -114,7 +143,7 @@ button {
 
 
 
-/* PC表示時 */
+/* PC表示 */
 
 @media screen and (min-width:600px){
 
