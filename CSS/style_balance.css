@@ -155,3 +155,18 @@
     font-size: 22px;
 
 }
+
+/* ===========================
+   残高編集 入力欄調整
+=========================== */
+
+
+.balance-item input,
+.balance-item select,
+.balance-item textarea {
+
+    padding: 15px;
+
+    font-size: 18px;
+
+}
