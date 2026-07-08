@@ -44,10 +44,75 @@ async function addExpense(){
     }
 
 
+
+    // ===========================
+    // LINE通知
+    // ===========================
+
+    
+
+    const lineResult = await fetch(
+    "https://yjwtjtjfshibgqgjgfkv.supabase.co/functions/v1/notify-line",
+    {
+        method:"POST",
+
+        headers:{
+            "Content-Type":"application/json"
+        },
+
+        body:JSON.stringify({
+
+            name:
+            expense.name,
+
+            category:
+            expense.category,
+
+            price:
+            expense.price
+
+        })
+    }
+);
+
+
+
+if(!lineResult.ok){
+
+    console.error(
+        "LINE通知失敗",
+        await lineResult.text()
+    );
+
+}
+
+const lineText =
+await lineResult.text();
+
+
+console.log(
+    "LINE結果",
+    lineText
+);
+
+
     alert("登録成功");
-document.getElementById("date").value = "";
-document.getElementById("category").value = "";
-document.getElementById("name").value = "";
-document.getElementById("price").value = "";
-document.getElementById("memo").value = "";
+
+
+
+    // ===========================
+    // 入力リセット
+    // ===========================
+
+    document.getElementById("date").value = "";
+
+    document.getElementById("category").value = "";
+
+    document.getElementById("name").value = "";
+
+    document.getElementById("price").value = "";
+
+    document.getElementById("memo").value = "";
+
+
 }
