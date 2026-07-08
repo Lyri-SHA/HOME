@@ -1,0 +1,157 @@
+/* ===========================
+   残高管理画面専用CSS
+=========================== */
+
+
+/* 口座一覧 */
+
+#account-list {
+
+    width:100%;
+
+}
+
+
+/* 口座ボタン */
+
+.account-button {
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    width:100%;
+
+    height:70px;
+
+
+    margin-bottom:20px;
+
+
+    padding:0 20px;
+
+
+    font-size:20px;
+
+
+    background:white;
+
+
+    border:1px solid #ccc;
+
+    border-radius:12px;
+
+
+}
+
+
+/* 口座名 */
+
+.account-button span:first-child {
+
+    font-weight:bold;
+
+}
+
+
+/* 残高 */
+
+.account-button span:last-child {
+
+    font-size:18px;
+
+}
+
+
+/* 戻るボタン */
+
+.back-button {
+
+    width:100%;
+
+    height:50px;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   残高編集画面
+=========================== */
+
+
+.balance-area {
+
+    width:100%;
+
+}
+
+
+
+.balance-item {
+
+    width:100%;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.balance-item label {
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.balance-item input,
+.balance-item select,
+.balance-item textarea {
+
+
+    height:60px;
+
+
+}
+
+
+
+.balance-item textarea {
+
+    height:150px;
+
+    resize:none;
+
+}
+
+
+/* 引き落とし項目 */
+
+.expense-area {
+
+    display:none;
+
+}
+
+/* 登録ボタン */
+
+.register-button {
+
+    display: block;
+
+    width: 100%;
+    height: 65px;
+
+    margin-top: 20px;
+
+    font-size: 22px;
+
+}

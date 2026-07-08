@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>残高登録</title>
+
+
+<link rel="stylesheet" href="../CSS/common.css">
+
+<link rel="stylesheet" href="../CSS/style_balance.css">
+
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+    <button
+    class="back-button"
+    onclick="location.replace('../Pages/balance.html?reload=' + Date.now())">
+
+    ← 戻る
+
+    </button>
+
+
+    <h1 id="account-name">
+        残高登録
+    </h1>
+
+
+</header>
+
+
+
+
+<main class="balance-area">
+
+
+    <div class="balance-item">
+
+
+        <label>
+            種類
+        </label>
+
+
+        <select id="type">
+
+
+            <option value="預入">
+                預入
+            </option>
+
+
+            <option value="引き出し">
+                引き出し
+            </option>
+
+
+            <option value="引き落とし">
+                引き落とし
+            </option>
+
+
+        </select>
+
+
+    </div>
+
+
+
+
+
+    <!-- 引き落とし用 -->
+
+
+    <div
+        class="expense-area"
+        id="expense-area">
+
+
+        <div class="balance-item">
+
+
+            <label>
+                カテゴリ
+            </label>
+
+
+            <select id="category">
+
+
+                <option value="">
+                    選択してください
+                </option>
+
+
+                <option value="食費">
+                    食費
+                </option>
+
+
+                <option value="日用品">
+                    日用品
+                </option>
+
+
+                <option value="固定費">
+                    固定費
+                </option>
+
+
+                <option value="その他">
+                    その他
+                </option>
+
+
+            </select>
+
+
+        </div>
+
+
+
+
+
+        <div class="balance-item">
+
+
+            <label>
+                内容
+            </label>
+
+
+            <input
+                type="text"
+                id="name"
+                placeholder="内容">
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <div class="balance-item">
+
+
+        <label>
+            金額
+        </label>
+
+
+        <input
+            type="number"
+            id="amount"
+            placeholder="金額を入力">
+
+
+    </div>
+
+
+
+
+
+    <div class="balance-item">
+
+
+        <label>
+            メモ
+        </label>
+
+
+        <textarea
+            id="memo"
+            placeholder="メモ">
+
+        </textarea>
+
+
+    </div>
+
+
+
+
+
+    <button
+        class="register-button"
+        onclick="saveBalance()">
+
+        登録
+
+    </button>
+
+
+
+</main>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<script src="../JS/supabase.js"></script>
+
+<script src="../JS/balance_edit.js"></script>
+
+
+</body>
+
+</html>
