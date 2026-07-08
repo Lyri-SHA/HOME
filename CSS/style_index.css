@@ -1,189 +1,29 @@
-/* 全体設定 */
-
-body {
-
-    font-family:
-    "メイリオ",
-    sans-serif;
-
-    margin:0;
-
-    padding:25px;
-
-    background:#f5f5f5;
-
-}
+/* ===========================
+   トップ画面専用CSS
+=========================== */
 
 
+/* メニュー */
 
-/* タイトル */
+.menu {
 
-h1 {
+    display: flex;
 
-    text-align:center;
+    flex-direction: column;
 
-    font-size:32px;
-
-    margin:20px 0 35px;
+    gap: 20px;
 
 }
 
 
+/* メニューボタン */
 
-/* 入力エリア */
+.menu button {
 
-.input-area {
+    width: 100%;
 
-    width:100%;
+    height: 65px;
 
-}
+    font-size: 22px;
 
-
-
-/* 項目名 */
-
-label {
-
-    display:block;
-
-    font-size:20px;
-
-    font-weight:bold;
-
-    margin-top:30px;
-
-    margin-bottom:12px;
-
-}
-
-
-
-/* 入力欄 */
-
-input,
-select,
-textarea {
-
-    display:block;
-
-    width:100%;
-
-    box-sizing:border-box;
-
-    padding:18px;
-
-    font-size:20px;
-
-    border:1px solid #ccc;
-
-    border-radius:12px;
-
-    background:white;
-
-}
-
-
-
-/* 日付・カテゴリ */
-
-input[type="date"],
-select {
-
-    height:65px;
-
-}
-
-
-
-/* メモ */
-
-textarea {
-
-    height:160px;
-
-}
-
-
-
-/* 登録ボタン */
-
-button {
-
-    width:100%;
-
-    height:65px;
-
-    margin-top:40px;
-
-    font-size:22px;
-
-    border:none;
-
-    border-radius:12px;
-
-}
-
-
-
-/* 戻るボタン */
-
-.back-button {
-
-    height:50px;
-
-    margin-top:0;
-
-    margin-bottom:10px;
-
-    font-size:18px;
-
-}
-
-
-
-/* PC */
-
-@media screen and (min-width:600px){
-
-    body {
-
-        max-width:500px;
-
-        margin:auto;
-
-    }
-
-}
-
-/* 強制確認用 */
-
-.input-area {
-    margin-top: 30px;
-}
-
-
-.input-area label {
-    display:block;
-    margin-top:40px !important;
-    margin-bottom:15px !important;
-}
-
-
-.input-area input,
-.input-area select,
-.input-area textarea {
-    min-height:70px;
-    padding:20px !important;
-    font-size:22px !important;
-}
-
-
-.input-area textarea {
-    min-height:180px;
-}
-
-
-.input-area button {
-    margin-top:50px !important;
-    height:70px;
 }

@@ -1,0 +1,99 @@
+/* ===========================
+   共通CSS
+=========================== */
+
+/* 全要素 */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* 全体 */
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: #f5f5f5;
+    font-family: "メイリオ", sans-serif;
+}
+
+
+/* タイトル */
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    margin: 25px 0 30px;
+}
+
+
+/* ボタン共通 */
+
+button {
+    cursor: pointer;
+
+    border: none;
+    border-radius: 10px;
+
+    transition:
+        background-color 0.2s,
+        transform 0.15s,
+        box-shadow 0.2s;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+
+/* ラベル */
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+
+/* 入力欄共通 */
+
+input,
+select,
+textarea {
+
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
+
+    background: white;
+
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+
+/* PC */
+
+@media screen and (min-width:600px) {
+
+    body {
+
+        max-width: 500px;
+        margin: auto;
+
+    }
+
+}
