@@ -8,6 +8,21 @@
     box-sizing: border-box;
 }
 
+/* ===========================
+   開発情報
+=========================== */
+
+.app-version{
+
+    text-align:center;
+
+    font-size:12px;
+
+    color:#999;
+
+    margin-top:40px;
+
+}
 
 /* 全体 */
 
