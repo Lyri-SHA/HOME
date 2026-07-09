@@ -1,0 +1,212 @@
+/* ===========================
+   支出グラフ画面専用CSS
+=========================== */
+
+
+/* 戻るボタン */
+
+.back-button{
+
+    width:100%;
+
+    height:50px;
+
+    font-size:18px;
+
+}
+
+
+
+/* 入力項目 */
+
+.graph-item{
+
+    width:100%;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/* ラベル */
+
+.graph-item label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+
+
+/* プルダウン */
+
+.graph-item select{
+
+    width:100%;
+
+    height:60px;
+
+    padding:15px;
+
+    font-size:18px;
+
+}
+
+
+
+/* グラフ表示エリア */
+
+.graph-area{
+
+    width:100%;
+
+    margin:40px auto;
+
+}
+
+
+
+/* グラフ */
+
+#expenseChart{
+
+    width:100%;
+
+    max-width:450px;
+
+    margin:auto;
+
+    display:block;
+
+}
+
+
+
+/* 集計エリア */
+
+.summary{
+
+    width:100%;
+
+    margin-top:40px;
+
+}
+
+
+
+/* 集計カード */
+
+.summary-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    width:100%;
+
+    min-height:65px;
+
+    margin-bottom:15px;
+
+    padding:15px 20px;
+
+    background:#ffffff;
+
+    border:1px solid #cccccc;
+
+    border-radius:12px;
+
+    box-sizing:border-box;
+
+}
+
+
+
+/* 左側 */
+
+.summary-item span:first-child{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+
+
+/* 右側 */
+
+.summary-item span:last-child{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+
+
+/* スマホ */
+
+@media screen and (max-width:599px){
+
+    body{
+
+        width:100%;
+
+        padding:20px;
+
+        box-sizing:border-box;
+
+    }
+
+
+
+    .graph-item select{
+
+        font-size:18px;
+
+    }
+
+
+
+    #expenseChart{
+
+        max-width:320px;
+
+    }
+
+
+
+    .summary-item{
+
+        padding:15px;
+
+    }
+
+
+
+    .summary-item span:first-child{
+
+        font-size:17px;
+
+    }
+
+
+
+    .summary-item span:last-child{
+
+        font-size:20px;
+
+    }
+
+}

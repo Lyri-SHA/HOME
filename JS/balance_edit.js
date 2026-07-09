@@ -321,6 +321,10 @@ async function saveBalance(){
                 amount,
 
 
+            balance:
+                newBalance,
+
+
             memo:
                 memo,
 
@@ -358,11 +362,6 @@ async function saveBalance(){
 
 
 
-
-
-
-
-
     // ===========================
     // 引き落としの場合
     // expensesへ登録
@@ -379,14 +378,10 @@ async function saveBalance(){
             .value;
 
 
-
         const name =
             document
             .getElementById("name")
             .value;
-
-
-
 
 
         const {
@@ -452,15 +447,7 @@ async function saveBalance(){
 
 
 
-
-
-
     alert("登録しました");
-
-
-
-
-
 
 
     // ===========================

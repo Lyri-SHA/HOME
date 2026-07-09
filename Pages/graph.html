@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>支出グラフ</title>
+
+    <link rel="stylesheet" href="../CSS/common.css">
+
+    <link rel="stylesheet" href="../CSS/style_graph.css">
+
+</head>
+
+<body>
+
+<header>
+
+   <button
+    class="back-button"
+    onclick="location.replace('../index.html?reload=' + Date.now())">
+
+    ← 戻る
+
+    </button>
+
+    <h1>
+
+        支出グラフ
+
+    </h1>
+
+</header>
+
+<main>
+
+    <!-- 期間 -->
+
+    <div class="graph-item">
+
+        <label>
+
+            期間
+
+        </label>
+
+        <select id="period">
+
+            <option value="all">
+
+                全て
+
+            </option>
+
+            <option value="year">
+
+                今年
+
+            </option>
+
+            <option value="month" selected>
+
+                今月
+
+            </option>
+
+        </select>
+
+    </div>
+
+    <!-- カテゴリー -->
+
+    <div class="graph-item">
+
+        <label>
+
+            カテゴリー
+
+        </label>
+
+        <select id="category">
+
+            <option value="all">
+
+                全て
+
+            </option>
+
+        </select>
+
+    </div>
+
+    <!-- グラフ -->
+
+    <div class="graph-area">
+
+        <canvas id="expenseChart"></canvas>
+
+    </div>
+
+    <!-- 集計 -->
+
+    <div class="summary">
+
+        <div class="summary-item">
+
+            <span>
+
+                合計支出
+
+            </span>
+
+            <span id="total-price">
+
+                ¥0
+
+            </span>
+
+        </div>
+
+        <div class="summary-item">
+
+            <span>
+
+                件数
+
+            </span>
+
+            <span id="total-count">
+
+                0件
+
+            </span>
+
+        </div>
+
+    </div>
+
+</main>
+
+<!-- Chart.js -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<script src="../JS/supabase.js"></script>
+
+<script src="../JS/graph.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+/* ===========================
+   残高推移画面専用CSS
+=========================== */
+
+
+/* 戻るボタン */
+
+.back-button{
+
+    width:100%;
+
+    height:50px;
+
+    font-size:18px;
+
+}
+
+
+
+
+/* 選択項目 */
+
+.graph-item{
+
+    width:100%;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+/* ラベル */
+
+.graph-item label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+
+
+
+/* プルダウン */
+
+.graph-item select{
+
+    width:100%;
+
+    height:60px;
+
+    padding:15px;
+
+    font-size:18px;
+
+}
+
+
+
+
+/* グラフエリア */
+
+.graph-area{
+
+    width:100%;
+
+    margin:40px auto;
+
+}
+
+
+
+
+/* グラフ */
+
+#balanceChart{
+
+    width:100%;
+
+    max-width:450px;
+
+    margin:auto;
+
+    display:block;
+
+}
+
+
+
+
+
+/* 集計 */
+
+.summary{
+
+    width:100%;
+
+    margin-top:40px;
+
+}
+
+
+
+
+/* カード */
+
+.summary-item{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    width:100%;
+
+
+    min-height:65px;
+
+
+    padding:15px 20px;
+
+
+    background:white;
+
+
+    border:1px solid #ccc;
+
+
+    border-radius:12px;
+
+
+    box-sizing:border-box;
+
+
+}
+
+
+
+
+
+/* 左 */
+
+.summary-item span:first-child{
+
+
+    font-size:18px;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+
+/* 右 */
+
+.summary-item span:last-child{
+
+
+    font-size:22px;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+/* スマホ */
+
+@media screen and (max-width:599px){
+
+
+    body{
+
+
+        width:100%;
+
+
+        padding:20px;
+
+
+        box-sizing:border-box;
+
+
+    }
+
+
+
+    #balanceChart{
+
+
+        max-width:320px;
+
+
+    }
+
+
+
+    .summary-item{
+
+
+        padding:15px;
+
+
+    }
+
+
+
+    .summary-item span:first-child{
+
+
+        font-size:17px;
+
+
+    }
+
+
+
+    .summary-item span:last-child{
+
+
+        font-size:20px;
+
+
+    }
+
+
+}
