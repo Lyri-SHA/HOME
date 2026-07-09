@@ -214,6 +214,76 @@ textarea {
     border-radius: 10px;
 }
 
+/* エフェクト */
+
+/* ===========================
+   コインエフェクト
+=========================== */
+
+
+.coin-effect{
+
+    position:fixed;
+
+    width:30px;
+
+    height:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    font-size:24px;
+
+
+    pointer-events:none;
+
+    z-index:9999;
+
+
+    animation:
+    coin-circle 0.8s ease-out forwards;
+
+}
+
+
+
+@keyframes coin-circle{
+
+
+    from{
+
+        transform:
+        translate(-50%,-50%)
+        scale(0);
+
+
+        opacity:1;
+
+    }
+
+
+
+    to{
+
+        transform:
+        translate(
+            var(--move-x),
+            var(--move-y)
+        )
+        scale(1);
+
+
+        opacity:0;
+
+    }
+
+}
+
+
 
 /* PC */
 
