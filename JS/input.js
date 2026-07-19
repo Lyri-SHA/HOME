@@ -20,10 +20,17 @@ async function loadCreditCards(){
 
 
     const { data, error } =
+
     await db
+
     .from("credit_cards")
+
     .select("*")
-    .eq("enabled", true);
+
+    .eq(
+        "enabled",
+        true
+    );
 
 
 
@@ -71,6 +78,8 @@ async function loadCreditCards(){
 
 
 
+
+
 async function addExpense(){
 
 
@@ -79,34 +88,40 @@ async function addExpense(){
 
 
         date:
-        document.getElementById("date").value,
+        document.getElementById(
+            "date"
+        ).value,
 
 
 
         category:
-        document.getElementById("category").value,
+        document.getElementById(
+            "category"
+        ).value,
 
 
 
         name:
-        document.getElementById("name").value,
+        document.getElementById(
+            "name"
+        ).value,
 
 
 
         price:
         Number(
-        document.getElementById("price").value),
+        document.getElementById(
+            "price"
+        ).value),
 
 
 
         memo:
-        document.getElementById("memo").value,
+        document.getElementById(
+            "memo"
+        ).value,
 
 
-
-        // ===========================
-        // クレジットカード追加
-        // ===========================
 
         credit_card_id:
         document.getElementById(
@@ -120,10 +135,24 @@ async function addExpense(){
 
 
 
-    const { error } =
+
+
+    // ===========================
+    // expenses登録
+    // ===========================
+
+
+    const { data:newExpense, error } =
+
     await db
+
     .from("expenses")
-    .insert(expense);
+
+    .insert(expense)
+
+    .select()
+
+    .single();
 
 
 
@@ -135,13 +164,184 @@ async function addExpense(){
         console.error(error);
 
 
-        alert("登録失敗");
+        alert(
+            "登録失敗"
+        );
 
 
         return;
 
 
     }
+
+
+
+
+
+
+
+    // ===========================
+    // クレジット請求作成
+    // ===========================
+
+
+    if(
+        expense.credit_card_id
+    ){
+
+
+
+        const { data:card, error:cardError } =
+
+        await db
+
+        .from("credit_cards")
+
+        .select("*")
+
+        .eq(
+            "id",
+            expense.credit_card_id
+        )
+
+        .single();
+
+
+
+
+
+        if(cardError){
+
+
+            console.error(
+                "カード取得失敗",
+                cardError
+            );
+
+
+        }
+        else{
+
+
+            const expenseDate =
+            new Date(
+                expense.date
+            );
+
+
+
+            let year =
+            expenseDate.getFullYear();
+
+
+
+            let month =
+            expenseDate.getMonth() + 2;
+
+
+
+
+
+            if(month > 12){
+
+
+                month = 1;
+
+
+                year++;
+
+
+            }
+
+
+
+
+
+
+
+            const paymentDate =
+
+            `${year}-`
+
+            +
+
+            String(month)
+            .padStart(2,"0")
+
+            +
+
+            "-"
+
+            +
+
+            String(
+                card.payment_day
+            )
+            .padStart(2,"0");
+
+
+
+
+
+
+
+            const { error:paymentError } =
+
+            await db
+
+            .from("credit_payments")
+
+            .insert({
+
+
+                credit_card_id:
+                expense.credit_card_id,
+
+
+                expense_id:
+                newExpense.id,
+
+
+                payment_date:
+                paymentDate,
+
+
+                amount:
+                expense.price,
+
+
+                status:
+                "未払い"
+
+
+            });
+
+
+
+
+
+
+
+            if(paymentError){
+
+
+                console.error(
+                    "credit_payments作成失敗",
+                    paymentError
+                );
+
+
+            }
+
+
+        }
+
+
+
+    }
+
+
+
 
 
 
@@ -155,9 +355,13 @@ async function addExpense(){
 
 
     const lineResult =
+
     await fetch(
+
     "https://yjwtjtjfshibgqgjgfkv.supabase.co/functions/v1/notify-line",
+
     {
+
 
         method:"POST",
 
@@ -189,7 +393,10 @@ async function addExpense(){
 
         })
 
+
     });
+
+
 
 
 
@@ -211,7 +418,11 @@ async function addExpense(){
 
 
 
+
+
+
     const lineText =
+
     await lineResult.text();
 
 
@@ -230,7 +441,9 @@ async function addExpense(){
 
 
 
-    alert("登録成功");
+    alert(
+        "登録成功"
+    );
 
 
 
@@ -280,6 +493,8 @@ async function addExpense(){
 
 
 }
+
+
 
 
 
