@@ -1,0 +1,24 @@
+.credit-card{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    margin:15px;
+
+    box-shadow:
+    0 3px 8px rgba(0,0,0,0.15);
+
+    line-height:1.8;
+
+}
+
+
+
+#credit-list{
+
+    padding:10px;
+
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>クレジット履歴</title>
+
+
+<link rel="stylesheet" href="../CSS/common.css">
+
+<link rel="stylesheet" href="../CSS/style_credit.css">
+
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<button
+class="back-button"
+onclick="location.replace('../index.html?reload=' + Date.now())">
+
+← 戻る
+
+</button>
+
+
+<h1>
+クレジット履歴
+</h1>
+
+
+</header>
+
+
+
+<main>
+
+
+<div id="credit-list">
+
+
+読み込み中...
+
+
+</div>
+
+
+</main>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+
+<script src="../JS/supabase.js"></script>
+
+
+<script src="../JS/credit.js"></script>
+
+
+</body>
+
+</html>
