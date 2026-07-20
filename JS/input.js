@@ -223,37 +223,82 @@ async function addExpense(){
         else{
 
 
+            // ===========================
+            // 支払日計算（締め日対応）
+            // ===========================
+
             const expenseDate =
             new Date(
                 expense.date
             );
 
 
-
             let year =
             expenseDate.getFullYear();
 
 
-
             let month =
-            expenseDate.getMonth() + 2;
+            expenseDate.getMonth() + 1;
+
+
+            const day =
+            expenseDate.getDate();
 
 
 
+            // 締め日判定
+            // 締め日以内 → 翌月
+            // 締め日超過 → 翌々月
 
+            if(
+                day <= card.closing_day
+            ){
 
-            if(month > 12){
+                month += 1;
 
+            }
+            else{
 
-                month = 1;
-
-
-                year++;
-
+                month += 2;
 
             }
 
 
+
+            // 年またぎ対応
+
+            while(
+                month > 12
+            ){
+
+                month -= 12;
+
+                year++;
+
+            }
+
+
+
+            // 存在しない日付対策
+            // 例：2月31日 → 2月28日
+
+            const lastDay =
+
+            new Date(
+                year,
+                month,
+                0
+            )
+            .getDate();
+
+
+
+            const paymentDay =
+
+            Math.min(
+                card.payment_day,
+                lastDay
+            );
 
 
 
@@ -274,11 +319,8 @@ async function addExpense(){
 
             +
 
-            String(
-                card.payment_day
-            )
+            String(paymentDay)
             .padStart(2,"0");
-
 
 
 
